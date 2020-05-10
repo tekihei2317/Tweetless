@@ -1,0 +1,71 @@
+@font-face{
+  font-family: "hoge";
+  src: font-url("font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* header */
+
+header{
+  height: 65px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+
+  background-color: white;
+  border-bottom: 1px solid #C70032;
+  font-family: "hoge";
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+header a{
+  display: inline-block;
+  line-height: 65px;
+  padding: 0px 15px;
+
+  text-decoration: none;
+  background-color: #C70032;
+  color: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  border: 1px solid white;
+  &:hover{
+    opacity: 1.0;
+  }
+}
+
+.header-left a{
+  font-size: 20px;
+}
+
+/* top */
+
+.top-wrapper{
+  padding: 210px 0px 100px 0px;
+  .container{
+    background-color: white;
+    text-align: center;
+    p{
+      font-size: 40px;
+      color: rgba(0,0,0,0.5);
+    }
+  }
+}
+
+/* footer */
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-right img{
+  height: 150px;
+}
