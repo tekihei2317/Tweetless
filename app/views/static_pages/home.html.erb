@@ -1,30 +1,6 @@
-<header>
-  <div class="container">
-    <div class="header-left">
-      <%= link_to("Tweetless", root_path) %>
-    </div>
-    <div class="header-right">
-      <%= link_to("新規登録", new_user_path) %><!--
-   --><%= link_to("ログイン", "/users/login") %>
-    </div>
-  </div>
-</header>
-
-
 <div class="top-wrapper">
   <div class="container">
     <p>つぶやけません(技術力不足)。</p>
   </div>
 </div>
-
-<footer>
-  <div class="container">
-    <div class="footer-left">
-      <p>鉄馬(@twitter_id)がHTML/CSS、Railsの勉強のために作っているサイトです。</p>
-      <p>デザインの能力は小学生の頃からアップデートされていない模様。</p>
-    </div>
-    <div class="footer-right">
-      <%= image_tag("/tekihei.png") %>
-    </div>
-  </div>
-</footer>
+<%= render "layouts/footer" %>
