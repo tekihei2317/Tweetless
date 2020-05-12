@@ -10,7 +10,7 @@
   }
 }
 
-form{
+.form-wrapper form{
   padding: 30px;
 
   border: 1px solid darkgray;
@@ -58,7 +58,7 @@ form{
   }
 }
 
-/* index, show */
+/* index */
 
 .index-wrapper{
   padding-top: 115px;
@@ -69,6 +69,8 @@ form{
   }
 }
 
+/* show */
+
 .show-wrapper{
   padding-top: 115px;
   .container{
@@ -76,6 +78,8 @@ form{
     justify-content: center;
   }
 }
+
+/* profile(index/showの中) */
 
 .profile{
   padding: 15px;
@@ -94,8 +98,8 @@ form{
   }
   
   .profile-right{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 220px;
     a{
       color: black;
       font-size: 25px;
@@ -114,6 +118,58 @@ form{
       &:hover{
         color: black;
       }
+    }
+  }
+}
+
+/* edit */
+.edit-wrapper{
+  padding-top: 115px;
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.edit-wrapper form{
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid rgba(199,0,50,0.7);
+  border-radius: 10px;
+
+  display: flex;
+  .profile-left img{
+    margin-right: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid gray;
+  }
+  
+  .profile-right{
+    width: 300px;
+    height: 220px;
+
+    a{
+      color: black;
+      font-size: 25px;
+      border-bottom: 5px solid rgba(199,0,50,1.0);
+    }
+
+    #user_bio{
+      margin-top: 20px;
+      height: 140px;
+      overflow: hidden;
+      resize: none;
+    }
+
+    position: relative;
+    input[type="submit"]{
+      position: absolute;
+      bottom: -10px;
+      right: 0px;
+      padding: 0px 10px;
+      border-radius: 3px;
     }
   }
 }

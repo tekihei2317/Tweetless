@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users=User.all
+    @users=User.all.order(created_at: :desc)
   end
 
   def show
@@ -27,9 +27,17 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user=User.find_by(id: params[:id])
   end
 
   def update
+    user=User.find_by(id: params[:id])
+    user.bio=params[:user][:bio]
+    if user.save
+      flash[:notice]="ユーザー情報を変更しました"
+      redirect_to user_url(user)
+    else
+    end
   end
 
   def destroy

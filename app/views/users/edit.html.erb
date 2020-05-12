@@ -1,2 +1,18 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="edit-wrapper">
+  <div class="container">
+
+    <div class="edit-profile">
+      <%= form_for(@user) do |f| %>
+        <div class="profile-left">
+          <%= image_tag("/#{@user.image_name}") %>
+        </div> 
+        <div class="profile-right">
+          <%= link_to(@user.name, user_path(@user)) %>
+          <%= f.text_area :bio %>
+          <%= f.submit value: "更新", data: { disable_with: "更新" } %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

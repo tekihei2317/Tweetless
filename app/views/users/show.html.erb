@@ -9,10 +9,9 @@
         <p><%= @user.bio %></p>
       </div>
       <div class="profile-bottom">
-        <%= link_to("戻る", users_path) %>
+        <%= link_to("ユーザー一覧へ", users_path) %>
         <% if current_user==@user %>
-          <%= link_to("編集", "#") %>
-          <%= link_to("削除", user_path(@user), method: :delete) %>
+          <%= link_to("編集", edit_user_path(@user)) %>
         <% end %>
       </div>
     </div>
