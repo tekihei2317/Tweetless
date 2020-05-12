@@ -14,17 +14,48 @@
  *= require_self
  */
 
+@import "bootstrap";
+
+/*
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div{
   margin: 0;
   padding: 0;
 }
+*/
 
 *{
   font-family: "hoge";
+  margin: 0;
+  padding: 0;
 }
 
 .container{
   padding: 0px 50px;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+.flash{
+  padding: 10px 0px;
+  position: fixed;
+  top: 65px;
+  left: 0px;
+  right: 0px;
+
+  border-radius: 5px;
+  font-size: 18px;
+
+  text-align: center;
+}
+
+.btn{
+  font-size: 20px;
 }

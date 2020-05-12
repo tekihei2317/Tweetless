@@ -8,6 +8,7 @@
 header{
   height: 65px;
   position: fixed;
+  top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
@@ -24,7 +25,7 @@ header .container{
 
 header a{
   display: inline-block;
-  line-height: 65px;
+  line-height: 62px;
   padding: 0px 15px;
 
   text-decoration: none;
@@ -34,6 +35,8 @@ header a{
   border-radius: 5px;
   border: 1px solid white;
   &:hover{
+    text-decoration: none;
+    color: white;
     opacity: 1.0;
   }
 }

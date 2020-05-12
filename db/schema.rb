@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_05_10_033801) do
     t.string "name"
     t.string "email"
     t.string "password"
-    t.string "image_name"
+    t.string "image_name", default: "default.png"
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
