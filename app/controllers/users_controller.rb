@@ -33,9 +33,14 @@ class UsersController < ApplicationController
   def update
     user=User.find_by(id: params[:id])
     user.bio=params[:user][:bio]
+    if params[:user][:file]
+      File.binwrite("public/user_image_#{user.id}", params[:user][:file].read)
+      user.image_name="user_image_#{user.id}"
+    end
+
     if user.save
-      flash[:notice]="ユーザー情報を変更しました"
-      redirect_to user_url(user)
+      flash[:notice]="ユーザー情報を更新しました"
+      redirect_to user_path(user)
     else
     end
   end

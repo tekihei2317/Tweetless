@@ -5,6 +5,10 @@
       <%= form_for(@user) do |f| %>
         <div class="profile-left">
           <%= image_tag("/#{@user.image_name}") %>
+          <label for="user_file">
+            画像を変更
+            <%= f.file_field :file %>
+          </label>
         </div> 
         <div class="profile-right">
           <%= link_to(@user.name, user_path(@user)) %>
